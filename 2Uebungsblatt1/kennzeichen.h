@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include <iostream>
-// IHR CODE 
+ 
 
 namespace kfz
 {
@@ -45,23 +45,24 @@ namespace kfz
 	}
 	
 	short einlesenZahl() { 
-		short inp = 0;
+		short inp = -1;
 		bool errorcheck = false;
+		//std::string dumpster;
 		while (errorcheck == false) {
-			inp = 1;
-			//char dumpster[42];
 			std::cout << "Insert Number between 1 and 9999: ";
-			std::cin.clear();
-			std::cin.sync();
-			std::cin >> inp;//>> dumpster;
-			if (inp <= 9999 && inp >= 1) {
+			std::cin >> inp;
+			if (inp < 10000 && inp >0) {
 				errorcheck = true;
 			}
-			std::cout << std::cin.good()<<std::endl;
-			if (errorcheck == false) std::cout << "invalid input please retry\n";
+			else {
+				std::cout << "\ninvalid input please retry: "<<std::endl;
+				std::cin.clear();
+				std::cin.ignore(std::cin.rdbuf()->in_avail());
+				//Zum löschen vom Buffer
+			}
 		}
 		return inp;
-	} //TODO Problem bei fehlerhafter eingabe geht in endlessloop lösen
+	} 
 	
 	kennzeichen* einlesen() { 
 		kennzeichen* newkenn;

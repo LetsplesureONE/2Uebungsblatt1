@@ -17,7 +17,6 @@ int main(){
 	std::cout << "testout: " << test1b << std::endl;
 	//*/
 	/*test 1c 
-	//TODO fehlerhafte eingabe endlessloop
 	short test1c = kfz::einlesenZahl();
 	std::cout << "testout: " << test1c << std::endl;
 	//*/
