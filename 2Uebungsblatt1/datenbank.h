@@ -11,12 +11,13 @@ namespace db
 		int eintraege = 0;
 	};
 	typedef struct datenbank datenbank;
+	/*
 	bool einfuegen(datenbank* db, kfz::kennzeichen* schild) { 
-		/* IHR CODE */ 
+		// IHR CODE 
 	}
 
 	std::string ausgabe(datenbank* db) { 
-		/* IHR CODE */ 
+		// IHR CODE  
 	}
-
+	*/
 }
