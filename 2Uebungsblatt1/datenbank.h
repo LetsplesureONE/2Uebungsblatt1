@@ -11,13 +11,22 @@ namespace db
 		int eintraege = 0;
 	};
 	typedef struct datenbank datenbank;
-	/*
+	
 	bool einfuegen(datenbank* db, kfz::kennzeichen* schild) { 
-		// IHR CODE 
+		if (db->eintraege == DB_LIMIT) {
+			return false;
+		}
+		db->schilder[db->eintraege] = schild;
+		db->eintraege++;
+		return true;
 	}
-
+	
 	std::string ausgabe(datenbank* db) { 
-		// IHR CODE  
+		std::string backbounce =( "Datenbank: "+db->name+"\n\----------------------\n");
+		for (int i = 0; i < db->eintraege; i++) {
+			backbounce = (backbounce + kfz::ausgabe(db->schilder[i])+"\n");
+		}
+		return backbounce;
 	}
-	*/
+	
 }

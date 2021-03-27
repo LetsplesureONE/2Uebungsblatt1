@@ -72,6 +72,15 @@ namespace kfz
 		return newkenn;
 	}
 	
+	kennzeichen* einlesenAuto(std::string ort, std::string buchstaben, short zahl) {
+		kennzeichen* newkenn;
+		newkenn = new kennzeichen;
+		newkenn->ort = ort;
+		newkenn->buchstaben = buchstaben;
+		newkenn->zahl = zahl;
+		return newkenn;
+	}
+
 	bool istSchnapszahl(const kennzeichen* pkenn) {
 		if (pkenn->zahl == 0) {
 			std::cout << "invalid input\n";

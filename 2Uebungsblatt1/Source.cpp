@@ -63,10 +63,10 @@ int main(){
 	/* test 2a
 	schnapszahlTest();
 	//*/
-	//* test 2b
+	/* test 2b
 	einlesenTest();
 	//*/
-	/* test 4
+	//* test 4
 	datenbankTest();
 	//*/
 	return 0;
@@ -117,5 +117,9 @@ void einlesenTest() {
 }
 
 void datenbankTest() {
-	// IHR CODE 
+	db::datenbank* newdb;
+	newdb = new db::datenbank;
+	db::einfuegen(newdb,kfz::einlesenAuto("LL","VB",42));
+	db::einfuegen(newdb, kfz::einlesenAuto("LL", "XXl", 69));
+	std::cout << db::ausgabe(newdb);
 }
