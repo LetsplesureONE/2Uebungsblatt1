@@ -79,7 +79,7 @@ namespace kfz
 		if (pkenn->zahl/10==0) {
 			return false;			
 		}
-		if (pkenn->zahl / 100 == 0) {
+		if ((pkenn->zahl / 100)%10 == 0) {
 			if ((pkenn->zahl % 10) == ((pkenn->zahl / 10) % 10)) {
 				return true; 
 			}
@@ -92,8 +92,8 @@ namespace kfz
 				}
 			}
 			else {
-				if (pkenn->zahl / 10000 == 0) {
-					if ((pkenn->zahl % 10) == ((pkenn->zahl / 10) % 10) == ((pkenn->zahl / 100) % 10) == (pkenn->zahl / 1000)) {
+				if ((pkenn->zahl / 10000)%10 == 0) {
+					if ((pkenn->zahl % 10) == ((pkenn->zahl / 10) % 10) == ((pkenn->zahl / 100) % 10) == (pkenn->zahl / 1000)%10) {
 						return true;
 					}
 				}
