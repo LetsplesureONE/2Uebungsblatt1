@@ -86,23 +86,27 @@ namespace kfz
 			std::cout << "invalid input\n";
 		}
 		if (pkenn->zahl/10==0) {
+			//std::cout << "Einstellig\n";
 			return false;			
 		}
 		if ((pkenn->zahl / 100)%10 == 0) {
+			//std::cout << "Zweistellig\n";
 			if ((pkenn->zahl % 10) == ((pkenn->zahl / 10) % 10)) {
 				return true; 
 			}
 		}
 		else {
 			if (pkenn->zahl / 1000 == 0) {
-				if ((pkenn->zahl % 10) == ((pkenn->zahl / 10) % 10) == ((pkenn->zahl / 100) % 10)) {
+				//std::cout << "Dreistellig\n";
+				if ((pkenn->zahl % 10) == ((pkenn->zahl / 10) % 10) && ((pkenn->zahl / 10) % 10) == ((pkenn->zahl / 100) % 10)) {
 
 					return true;
 				}
 			}
 			else {
 				if ((pkenn->zahl / 10000)%10 == 0) {
-					if ((pkenn->zahl % 10) == ((pkenn->zahl / 10) % 10) == ((pkenn->zahl / 100) % 10) == (pkenn->zahl / 1000)%10) {
+					//std::cout << "Vierstellig\n";
+					if ((pkenn->zahl % 10) == ((pkenn->zahl / 10) % 10) && ((pkenn->zahl / 100) % 10) == (pkenn->zahl / 1000)%10 && ((pkenn->zahl / 10) % 10) == ((pkenn->zahl / 100) % 10)) {
 						return true;
 					}
 				}

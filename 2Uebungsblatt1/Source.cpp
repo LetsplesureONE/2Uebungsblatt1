@@ -26,9 +26,8 @@ int main(){
 	std::cout << "testout: " << test1d <<" "<< test1d->ort<<" "<< test1d->buchstaben << " "<< test1d->zahl << " " << std::endl;
 	//*/
 	/*test 1e 
-	//TODO Schnapszahl 100 und 1000 Verbessern
 	kfz::kennzeichen* test1e = new kfz::kennzeichen;
-	test1e->zahl = 3333;
+	test1e->zahl = 9999;
 	std::cout << "testout: " << test1e->zahl << " " << kfz::istSchnapszahl(test1e)<< std::endl;
 	//*/
 	/*test 1f
@@ -66,7 +65,7 @@ int main(){
 	/* test 2b
 	einlesenTest();
 	//*/
-	//* test 4
+	/* test 4
 	datenbankTest();
 	//*/
 	return 0;
