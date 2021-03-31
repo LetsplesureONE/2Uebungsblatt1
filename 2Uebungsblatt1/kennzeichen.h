@@ -47,7 +47,6 @@ namespace kfz
 	short einlesenZahl() { 
 		short inp = -1;
 		bool errorcheck = false;
-		//std::string dumpster;
 		while (errorcheck == false) {
 			std::cout << "Insert Number between 1 and 9999: ";
 			std::cin >> inp;
@@ -65,20 +64,12 @@ namespace kfz
 	} 
 	
 	kennzeichen* einlesen() { 
-		kennzeichen* newkenn;
-		newkenn = new kennzeichen;
-		newkenn->ort = einlesenOrt();
-		newkenn->buchstaben = einlesenBuchstaben();
-		newkenn->zahl = einlesenZahl();
+		kennzeichen* newkenn = new kennzeichen{ einlesenOrt(), einlesenBuchstaben(), einlesenZahl() };
 		return newkenn;
 	}
 	
 	kennzeichen* einlesenAuto(std::string ort, std::string buchstaben, short zahl) {
-		kennzeichen* newkenn;
-		newkenn = new kennzeichen;
-		newkenn->ort = ort;
-		newkenn->buchstaben = buchstaben;
-		newkenn->zahl = zahl;
+		kennzeichen* newkenn = new kennzeichen{ ort, buchstaben,zahl };
 		return newkenn;
 	}
 
@@ -167,9 +158,7 @@ namespace kfz
 	}
 	
 	std::string ausgabe(const kennzeichen* pkenn) { 
-		std::string kennung = (pkenn->ort + '-' + pkenn->buchstaben + '-' + std::to_string(pkenn->zahl));
-
-		return kennung;
+	return (pkenn->ort + '-' + pkenn->buchstaben + '-' + std::to_string(pkenn->zahl));
 	}
 	
 }

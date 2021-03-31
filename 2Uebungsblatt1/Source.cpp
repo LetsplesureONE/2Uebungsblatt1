@@ -11,7 +11,7 @@ int main(){
 	/*test 1a 
 	std::string test1a = kfz::einlesenOrt();
 	std::cout << "testout: " << test1a << std::endl;
-	/*/
+	//*/
 	/*test 1b
 	std::string test1b = kfz::einlesenBuchstaben();
 	std::cout << "testout: " << test1b << std::endl;
@@ -64,7 +64,7 @@ int main(){
 	/* test 2b
 	einlesenTest();
 	//*/
-	/* test 4
+	//* test 4
 	datenbankTest();
 	//*/
 	return 0;
